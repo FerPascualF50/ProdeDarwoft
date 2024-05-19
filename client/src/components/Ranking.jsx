@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const UserAccordion = ({ user, expanded, onChange }) => (
   <Accordion  expanded={expanded}  onChange={onChange} 
-    sx={{ maxWidth: 650,  width: '100%',  margin: 'auto', marginBottom: expanded ? '2px' : '2px', }} D>
+    sx={{ maxWidth: 650,  width: '100%',  margin: 'auto', marginBottom: expanded ? '2px' : '2px', }}>
     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
       <Typography sx={{ flexGrow: 1 }}>
         {user.firstName} {user.lastName}
@@ -33,24 +33,116 @@ const UserAccordionList = () => {
   const users = [
     {
       id: 1,
-      firstName: 'John',
-      lastName: 'Doe',
-      totalPoints: 100,
+      firstName: 'Caro',
+      lastName: 'Luna',
+      totalPoints: 110,
       matches: [
-        { id: 1, name: 'Match 1', points: 30 },
-        { id: 2, name: 'Match 2', points: 70 },
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
       ],
     },
     {
       id: 2,
-      firstName: 'Jane',
-      lastName: 'Smith',
-      totalPoints: 85,
+      firstName: 'Seba',
+      lastName: 'Mondino',
+      totalPoints: 110,
       matches: [
-        { id: 1, name: 'Match 1', points: 40 },
-        { id: 2, name: 'Match 2', points: 45 },
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
       ],
     },
+    {
+      id: 3,
+      firstName: 'Waldemar ',
+      lastName: 'Krumrick',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 4,
+      firstName: 'Cristian',
+      lastName: 'Bullokles',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 5,
+      firstName: 'Cecilia',
+      lastName: 'Mariani',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 6,
+      firstName: 'Silvia',
+      lastName: 'Leiva',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 7,
+      firstName: 'Agustina',
+      lastName: 'Edmé',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 8,
+      firstName: 'Emanuel',
+      lastName: 'Balcazar',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 9,
+      firstName: 'Victoria',
+      lastName: 'Pizarro',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 10,
+      firstName: 'Horacio',
+      lastName: 'Perulero',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+    {
+      id: 11,
+      firstName: 'Carla',
+      lastName: 'Damario',
+      totalPoints: 110,
+      matches: [
+        { id: 1, name: 'Argentina - Canadá', points: 55 },
+        { id: 2, name: 'Perú - Chile', points: 55 },
+      ],
+    },
+
+   
   ];
 
   return (
