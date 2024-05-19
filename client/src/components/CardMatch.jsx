@@ -18,7 +18,7 @@ const CardMatch = ({ match }) => {
               <Typography variant="body1" component="span" >
                 vs
               </Typography>
-              <Typography variant="body1" component="span" sx={{ marginLeft: '5px', marginRight: '5px', flex: '1', textAlign: 'right' }}>
+              <Typography variant="body1" component="span" sx={{ marginLeft: '5px', flex: '1' }}>
                 {visitorCountry?.id?.name}
               </Typography>
             </Box>
