@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Table, TableBody, Typography, TableHead, TableRow, Paper, CardContent, Box } from '@mui/material';
+import { Table, TableBody, Typography, TableHead, TableRow, Paper, CardContent, Box, Avatar } from '@mui/material';
 import { CustomCard, CustomTableContainer, SmallCell, CountryCell, HeaderCell, CountryHeaderCell } from '../components/styles/CardGroups.styles';
 import { useDispatch } from 'react-redux';
 import { getCountries } from '../store/countrySlice';
@@ -12,9 +12,9 @@ const CardGroups = ({ group, countries }) => {
   }, []);
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', p: 1 }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', p: 0.5 }}>
       <CustomCard sx={{ maxWidth: 752, width: '100%', display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: 1, padding:'8px' }}>
+        <CardContent sx={{ flex: 1, padding: '8px' }}>
           <Typography variant="h6" sx={{ textAlign: 'center', mb: 1, fontSize: '1rem' }}> Grupo {group} </Typography>
           <CustomTableContainer component={Paper}>
             <Table>
@@ -34,7 +34,7 @@ const CardGroups = ({ group, countries }) => {
                 {countries.map((row) => (
                   <TableRow key={row._id}>
                     <CountryCell component="th" scope="row" sx={{ height: '42px', display: 'flex', alignItems: 'center' }}>
-                      {row.flag && <img src={row.flag} alt="Flag" style={{ marginRight: '8px', width: '24px' }} />}
+                      {row.flag && <Avatar src={row.flag} alt="Flag" sx={{ width: '30px', height: '30px', marginRight: '8px' }} />}
                       {row.name}
                     </CountryCell>
                     <SmallCell sx={{ fontWeight: 'bold' }}>{row.points}</SmallCell>
