@@ -3,9 +3,7 @@ import { Accordion, AccordionSummary, AccordionDetails, Typography, List,  ListI
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const UserAccordion = ({ user, expanded, onChange }) => (
-  <Accordion 
-    expanded={expanded} 
-    onChange={onChange} 
+  <Accordion  expanded={expanded}  onChange={onChange} 
     sx={{ maxWidth: 650,  width: '100%',  margin: 'auto', marginBottom: expanded ? '2px' : '2px', }} D>
     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
       <Typography sx={{ flexGrow: 1 }}>
