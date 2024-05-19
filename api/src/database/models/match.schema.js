@@ -7,20 +7,41 @@ const MatchSchema = mongoose.Schema({
     date: {
       type: Date
     },
-    numeroDay: {
+    numberDay: {
       type: Number
     },
     localCountry: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Country",
+      id:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Country",
+      }, 
+      goals:{
+        goalsGame:{
+          type: Number,
+          default: 0
+        }, 
+        goalsPenalty:{
+          type: Number,
+          default: 0
+        },
+      },
     },
     visitorCountry: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Country",
+      id:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Country",
+      }, 
+      goals:{
+        goalsGame:{
+          type: Number,
+          default: 0
+        }, 
+        goalsPenalty:{
+          type: Number,
+          default: 0
+        },
+      },
     },
-    result:{
-      type: [Number]
-    }
 });
 
 export const MatchModel = mongoose.model("Match", MatchSchema);
