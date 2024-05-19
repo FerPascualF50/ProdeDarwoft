@@ -1,10 +1,10 @@
-import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemText, Toolbar, Typography, Button, Avatar, Tooltip } from '@mui/material';
+import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemText, Toolbar, Typography, Avatar, Tooltip, ListItemButton } from '@mui/material';
 import PropTypes from 'prop-types';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logout from '@mui/icons-material/Logout';
 import { useState } from 'react';
-// import { navItems, navItemsAdmin, navItemsUser } from '../utils/navItems';
-import { Link, useNavigate } from 'react-router-dom';
+import { navItemsAdmin, navItemsUser } from '../utils/navItems';
+import { useNavigate } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { logout } from '../store/authSlice'
 import { useTheme } from '@mui/material/styles';
@@ -18,16 +18,15 @@ function DrawerAppBar(props) {
   const navigate = useNavigate();
   // const dispatch = useDispatch();
   const theme = useTheme();
-  // // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isLoggedIn = localStorage.getItem('access_token');
 
   // const { user } = useSelector((state) => state.auth);
-  // let navItemsToRender = navItems;
-  // const roleMappings = {
-  //   admin: navItemsAdmin,
-  //   user: navItemsUser,
-  // };
-  // if (isLoggedIn && user?.rol in roleMappings) navItemsToRender = roleMappings[user?.rol];
+  let navItemsToRender = navItemsAdmin;
+  const roleMappings = {
+    admin: navItemsAdmin,
+    user: navItemsUser,
+  };
+  if (isLoggedIn && user?.rol in roleMappings) navItemsToRender = roleMappings[user?.rol];
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -35,7 +34,6 @@ function DrawerAppBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
 
   const handleLogout = async () => {
     // await dispatch(logout());
@@ -48,13 +46,13 @@ function DrawerAppBar(props) {
       <Typography variant="h6" sx={{ my: 2 }}>Menu</Typography>
       <Divider />
       <List>
-        {/* {navItemsToRender.map((item) => (
+        {navItemsToRender.map((item) => (
           <ListItem disableGutters key={item.name} disablePadding>
-            <Link to={item.route} className={styles.link_Drawer}>
+            <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item.name} />
-            </Link>
+            </ListItemButton>
           </ListItem>
-        ))} */}
+        ))}
       </List>
     </Box>
   );
@@ -68,50 +66,32 @@ function DrawerAppBar(props) {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box component={container} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-              <Box component="img" src={logoDarwoft} alt="Logo" fill="#43414B" sx={{ height: '50px', width: '50px', display: 'block', '& svg': { fill: '#43414B' } }} />
-              <Typography color='primary' variant="h5" fontFamily='Lato, sans-serif' sx={{ marginLeft:'10%', marginRight:'10%'  }}>Prode</Typography>
-              <Box component="img" src={logoCopaAmerica} alt="LogoCopaAmerica" sx={{ width: '120px', aspectRatio: '9 / 3', flexShrink: 0, '& svg': { fill: '#43414B' } }} />
+              <Box component="img" src={logoDarwoft} alt="Logo" fill="#43414B" sx={{ marginLeft:'0px', height: '50px', width: '50px', display: 'block', '& svg': { fill: '#43414B' } }} />
+              <Typography color='primary' variant="h5" fontFamily='Lato, sans-serif' sx={{ marginLeft:'6%', marginRight:'9%'  }}>Prode</Typography>
+              <Box component="img" src={logoCopaAmerica} alt="LogoCopaAmerica" sx={{ marginRight:'33%', width: '110px', aspectRatio: '10 / 3', flexShrink: 0, '& svg': { fill: '#43414B' } }} />
+            </Box>
+            <Box>
+              {isLoggedIn && (
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Tooltip title="Cerrar sesión">
+                    <IconButton onClick={handleLogout} sx={{ color: '#fff' }}>
+                      <Logout />
+                    </IconButton>
+                  </Tooltip>
+                  <Avatar alt="User Avatar" src="/path/to/avatar.jpg" />
+                </div>
+              )}
+              <IconButton aria-label="open drawer" edge="end" onClick={handleDrawerToggle} sx={{ color: '#43414B' }} >
+                <MenuIcon />
+              </IconButton>
             </Box>
           </Box>
-          {/* {!isLoggedIn && 
-            <Button size="small" sx={{ display: 'flex', padding: '6px 12px', alignItems: 'center', minWidth: '120px', fontSize: '0.8rem', height: '40px', color: '#fff', backgroundColor: '#ff5862', '&:hover': { backgroundColor: '#ff5862' } }}>
-              <Link to='/login' style={{ color: 'inherit', textDecoration: 'none' }}
-              // className={styles.link}
-              >Mi Cuenta
-              </Link>
-            </Button>
-          )} */}
-          {isLoggedIn && (
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <Tooltip title="Cerrar sesión">
-                <IconButton onClick={handleLogout} sx={{ color: '#fff' }}>
-                  <Logout />
-                </IconButton>
-              </Tooltip>
-              <Avatar alt="User Avatar" src="/path/to/avatar.jpg" />
-            </div>
-          )}
-          <IconButton aria-label="open drawer" edge="end" onClick={handleDrawerToggle} sx={{ color: '#43414B' }} >
-            <MenuIcon />
-          </IconButton>
         </Toolbar>
       </AppBar>
       <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{ keepMounted: true }}
-          anchor="right"
-          sx={{
-            '& .MuiDrawer-paper': {
-              boxSizing: 'border-box',
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
+        <Drawer variant="temporary" open={mobileOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true }} anchor="right" sx={{ '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, }, }}
+        // container={container}
+        >{drawer}
         </Drawer>
       </nav>
       <Box>
@@ -126,4 +106,3 @@ DrawerAppBar.propTypes = {
 };
 
 export default DrawerAppBar;
-
