@@ -2,7 +2,6 @@ import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, 
 import PropTypes from 'prop-types';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logout from '@mui/icons-material/Logout';
-// import styles from '../components/styles/navbar.module.css'
 import { useState } from 'react';
 // import { navItems, navItemsAdmin, navItemsUser } from '../utils/navItems';
 import { Link, useNavigate } from 'react-router-dom';
@@ -36,7 +35,7 @@ function DrawerAppBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-  
+
 
   const handleLogout = async () => {
     // await dispatch(logout());
@@ -45,7 +44,7 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', anchor:'right' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', anchor: 'right' }}>
       <Typography variant="h6" sx={{ my: 2 }}>Menu</Typography>
       <Divider />
       <List>
@@ -67,21 +66,14 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar component="nav" sx={{ height: '64px', display: 'flex', justifyContent: 'center', backgroundColor: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)', boxShadow: 'none' }} >
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-
-          <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
-            {/* {navItemsToRender.map((item) => (
-              <Button key={item.name} sx={{ color: '#fff', boxShadow: 'none' }}>
-              <Link className={styles.link} to={item.route}>{item.name}</Link>
-              </Button>
-            ))} */}
+          <Box component={container} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+              <Box component="img" src={logoDarwoft} alt="Logo" fill="#43414B" sx={{ height: '50px', width: '50px', display: 'block', '& svg': { fill: '#43414B' } }} />
+              <Typography color='primary' variant="h5" fontFamily='Lato, sans-serif' sx={{ marginLeft:'10%', marginRight:'10%'  }}>Prode</Typography>
+              <Box component="img" src={logoCopaAmerica} alt="LogoCopaAmerica" sx={{ width: '120px', aspectRatio: '9 / 3', flexShrink: 0, '& svg': { fill: '#43414B' } }} />
+            </Box>
           </Box>
-          <Box component={container} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-            <Box component="img" src={logoDarwoft} alt="Logo" fill="#43414B" sx={{ height: '50px', width: '50px', display: 'block', margin: 'auto', '& svg': { fill: '#43414B' } }} />
-            <Typography color='primary' variant="h5" fontFamily='Lato, sans-serif' sx={{ marginLeft: '10px' }}>Prode</Typography>
-            <Box component="img" src={logoCopaAmerica} alt="LogoCopaAmerica" sx={{ width: '110px', height: '64px', display: 'block', margin: 'auto', '& svg': { fill: '#43414B' } }} />
-
-          </Box>
-          {/* {!isLoggedIn && (
+          {/* {!isLoggedIn && 
             <Button size="small" sx={{ display: 'flex', padding: '6px 12px', alignItems: 'center', minWidth: '120px', fontSize: '0.8rem', height: '40px', color: '#fff', backgroundColor: '#ff5862', '&:hover': { backgroundColor: '#ff5862' } }}>
               <Link to='/login' style={{ color: 'inherit', textDecoration: 'none' }}
               // className={styles.link}
@@ -105,7 +97,20 @@ function DrawerAppBar(props) {
         </Toolbar>
       </AppBar>
       <nav>
-        <Drawer container={container} variant="temporary" open={mobileOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true, anchor:'right' }} sx={{ display: { xs: 'block', sm: 'none' }, '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth } }}>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{ keepMounted: true }}
+          anchor="right"
+          sx={{
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+            },
+          }}
+        >
           {drawer}
         </Drawer>
       </nav>
@@ -121,3 +126,4 @@ DrawerAppBar.propTypes = {
 };
 
 export default DrawerAppBar;
+
