@@ -6,13 +6,7 @@ const UserAccordion = ({ user, expanded, onChange }) => (
   <Accordion 
     expanded={expanded} 
     onChange={onChange} 
-    sx={{ 
-      maxWidth: 650, 
-      width: '100%', 
-      margin: 'auto',
-      marginBottom: expanded ? '2px' : '2px',
-    }}
-  >
+    sx={{ maxWidth: 650,  width: '100%',  margin: 'auto', marginBottom: expanded ? '2px' : '2px', }} D>
     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
       <Typography sx={{ flexGrow: 1 }}>
         {user.firstName} {user.lastName}
