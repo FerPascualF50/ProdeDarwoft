@@ -1,0 +1,610 @@
+[
+  {
+    "group": "Grupo A",
+    "date": "2024-06-20T21:00:00.000",
+    "numberDay": 1,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa44",
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa47", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo A",
+    "date": "2024-06-21T21:00:00.000",
+    "numberDay": 2,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa45", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa46", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo B",
+    "date": "2024-06-22T19:00:00.000",
+    "numberDay": 3,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa49", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4a", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo B",
+    "date": "2024-06-22T22:00:00.000",
+    "numberDay": 3,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa48", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4b", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo C",
+    "date": "2024-06-23T19:00:00.000",
+    "numberDay": 4,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4c", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4f", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo C",
+    "date": "2024-06-23T22:00:00.000",
+    "numberDay": 4,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4d", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4e", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo D",
+    "date": "2024-06-24T19:00:00.000",
+    "numberDay": 5,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa51", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa52", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo D",
+    "date": "2024-06-24T22:00:00.000",
+    "numberDay": 5,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa50", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa53", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo A",
+    "date": "2024-06-25T19:00:00.000",
+    "numberDay": 6,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa45",
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa47", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo A",
+    "date": "2024-06-25T22:00:00.000",
+    "numberDay": 6,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa46", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa44", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo B",
+    "date": "2024-06-26T19:00:00.000",
+    "numberDay": 7,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa49", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4b", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo B",
+    "date": "2024-06-26T22:00:00.000",
+    "numberDay": 7,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4a", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa48", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo C",
+    "date": "2024-06-27T19:00:00.000",
+    "numberDay": 8,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4e", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4c", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo C",
+    "date": "2024-06-27T22:00:00.000",
+    "numberDay": 8,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4d", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4f", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo D",
+    "date": "2024-06-28T19:00:00.000",
+    "numberDay": 9,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa51", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa53", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo D",
+    "date": "2024-06-28T22:00:00.000",
+    "numberDay": 9,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa52", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa50", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo A",
+    "date": "2024-06-29T21:00:00.000",
+    "numberDay": 10,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa44",
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa45", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo A",
+    "date": "2024-06-29T21:00:00.000",
+    "numberDay": 10,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa47", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa46", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo B",
+    "date": "2024-06-30T21:00:00.000",
+    "numberDay": 11,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa48", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa49", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo B",
+    "date": "2024-06-30T21:00:00.000",
+    "numberDay": 11,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4b", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4a", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo C",
+    "date": "2024-07-01T22:00:00.000",
+    "numberDay": 12,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4f", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4e", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo C",
+    "date": "2024-07-01T22:00:00.000",
+    "numberDay": 12,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4c", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4d", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo D",
+    "date": "2024-07-02T22:00:00.000",
+    "numberDay": 13,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa50", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa51", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Grupo D",
+    "date": "2024-07-02T22:00:00.000",
+    "numberDay": 13,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa53", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa52", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Cuartos de Final",
+    "date": "2024-07-04T22:00:00.000",
+    "numberDay": 14,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4f", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4e", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Cuartos de Final",
+    "date": "2024-07-05T22:00:00.000",
+    "numberDay": 15,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa4c", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa4d", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Cuartos de Final",
+    "date": "2024-07-06T19:00:00.000",
+    "numberDay": 16,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa50", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa51", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Cuartos de Final",
+    "date": "2024-07-06T22:00:00.000",
+    "numberDay": 16,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa53", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa52", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Semifinal",
+    "date": "2024-07-09T21:00:00.000",
+    "numberDay": 17,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa50", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa51", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Semifinal",
+    "date": "2024-07-10T21:00:00.000",
+    "numberDay": 18,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa53", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa52", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "3er Puesto",
+    "date": "2024-07-13T21:00:00.000",
+    "numberDay": 19,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa53", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa52", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  },
+  {
+    "group": "Final",
+    "date": "2024-07-14T21:00:00.000",
+    "numberDay": 20,
+    "localCountry": {
+      "id": "6648f2fdd8508b10460daa53", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    },
+    "visitorCountry": {
+      "id": "6648f2fdd8508b10460daa52", 
+      "goals": {
+        "goalsGame": 0,
+        "goalsPenalty": 0
+      }
+    }
+  }
+]
