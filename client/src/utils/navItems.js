@@ -1,5 +1,5 @@
 export const navItemsAdmin = [
-  { name: 'LOGIN', route: '/login' },
+  { name: 'LOGIN', route: '/login', onclick: 'login' },
   { name: 'HOME', route: '/' },
   { name: 'RESULTADOS', route: 'results-by-admin' },
   { name: 'USUARIOS', route: 'users-by-admin' },
@@ -8,8 +8,8 @@ export const navItemsAdmin = [
 ];
 
 export const navItemsUser = [
-  { name: 'LOGIN', route: '/login' },
+  { name: 'LOGIN', route: '/login', onclick: 'login' },
   { name: 'HOME', route: '/' },
-  { name: 'RESULTADOS', route: 'results-by-user' },
+  { name: 'RESULTADOS', route: '/results' },
   { name: 'LOGOUT', route: '/logout' },
 ];

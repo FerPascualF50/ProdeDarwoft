@@ -1,21 +1,11 @@
 import { Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
-// import Plans from './pages/Plans'
+import Results from './pages/Results'
 import Layout from './components/Layout'
-// import Faq from './pages/Faq'
-// import Centers from './pages/Centers'
-// import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import Login from './pages/Login'
 // import SignUp from './pages/SignUp';
-// import DashboardUser from './pages/DashUser'
-// import DashboardAdmin from './pages/DashAdmin'
-// import ForgetPass from './pages/ForgetPass'
-// import ValidateCodePass from './pages/ValidateCodePass'
-// import TabsAdmin from './pages/TabsAdmin'
 // import Users from './pages/Users'
-// import TabsUser from './pages/TabsUser'
-// import MyProfile from './pages/MyProfile'
 import './App.css'
 // import { useDispatch } from 'react-redux'
 // import { useEffect } from 'react'
@@ -44,7 +34,7 @@ const App = () => {
         {/* <Route element={<PrivateRoute />}> */}
           {/* <Route path="/plans" element={<Plans />} /> */}
         {/* </Route> */}
-        {/* <Route path='/centers' element={<Centers />} /> */}
+        <Route path='/results' element={<Results />} />
         {/* <Route path='/contact' element={<Contact />} /> */}
         {/* <Route path='/faq' element={<Faq />} /> */}
         {/* <Route path='/dashboard-admin'> */}
