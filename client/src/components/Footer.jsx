@@ -7,14 +7,15 @@ import { Box, Typography, Container, Link } from '@mui/material';
       <CssBaseline />
       <Container maxWidth="sm">
         <Box component="footer" sx={{ py: 3, px: 2 }}>
-          <Typography variant="body2" color="text.primary" align="center">
+          {/* <Typography variant="body2" color="text.primary" align="center">
             {'Copyright © '}
             <Link sx={{ cursor: 'pointer' }} color="inherit" href="https://www.linkedin.com/in/fernando-pascual-full-stack-developer/" target="_blank">
               Fernando Pascual
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
-          </Typography>
+          </Typography> */}
+          <Typography align="center">Prode DRAWOFT Copa America 2024</Typography>
         </Box>
       </Container>
     </Box>
