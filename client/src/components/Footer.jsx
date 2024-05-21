@@ -15,7 +15,7 @@ import { Box, Typography, Container, Link } from '@mui/material';
             {new Date().getFullYear()}
             {'.'}
           </Typography> */}
-          <Typography align="center">Prode DRAWOFT Copa America 2024</Typography>
+          <Typography align="center">Prode DARWOFT Copa America 2024</Typography>
         </Box>
       </Container>
     </Box>
