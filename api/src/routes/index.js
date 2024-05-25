@@ -1,12 +1,10 @@
 import express from "express";
 import { countryRouter } from "./country.routes.js";
 import { matchRouter } from "./match.routes.js";
-// import { authMiddleware } from "../utils/middlewares.js";
-
+import { authRouter } from "./auth.routes.js";
 
 export const router = express.Router();
 router
-	// .use("/users", authMiddleware, userRouter)
-  // .use("/auths", userAuthRouter)
+	.use("/auth", authRouter)
 	.use("/countries", countryRouter)
-	.use("/matches",  matchRouter);
+	.use("/matches", matchRouter);

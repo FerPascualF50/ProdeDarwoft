@@ -1,58 +1,45 @@
 import mongoose from "mongoose";
 
 const UserSchema = mongoose.Schema({
-    userName: {
-      type: String,
-      required: true,
-      unique: true,
-      match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    },
-    password: {
-      type: String,
-      required: true,
-      select: false,
-      minlength: 8,
-    },
-    firstName: {
-      type: String,
-      required: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-    },
-    cellphone: {
-      type: Number,
-    },
-    rol: {
-      type: String,
-      enum: ["user", "admin"],
-      default: "user",
-    },
-    userValidated: {
-      type: Boolean,
-      default: false,
-    },
-    imageProfile: {
-      type: String,
-      default:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fthenounproject.com%2Fbrowse%2Ficons%2Fterm%2Fprofile-picture%2F&psig=AOvVaw2PEsDrRf0Sx1DTqix9jgx0&ust=1715433883289000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMj64LCXg4YDFQAAAAAdAAAAABAJ",
-    },
-    confirmationCode: {
-      type: String,
-      unique: true,
-    },
-    codeToChagePass: {
-      type: String,
-      default:'',
-    },
-    pointsByMatch:{
-      type: Number,
-    },
-    pointsByResult:{
-      type: Number,
-    },
+  providerId: {
+    type: String,
+    unique: true,
   },
+  provider: {
+    type: String
+  },
+  userName: {
+    type: String,
+    required: true,
+    unique: true,
+    match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  },
+  displayName:{
+    type: String
+  },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  imageProfile: {
+    type: String,
+    required: false,
+  },
+  pointsByMatch: {
+    type: Number,
+  },
+  pointsByResult: {
+    type: Number,
+  },
+},
   { timestamps: true }
 );
 
