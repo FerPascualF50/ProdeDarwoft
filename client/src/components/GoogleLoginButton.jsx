@@ -1,36 +1,43 @@
-import { Box, Button, CircularProgress, Typography } from '@mui/material';
-import GoogleIcon from '@mui/icons-material/Google';
+import { useEffect } from 'react';
 
-const GoogleLoginButton = ({ onClick, loading }) => {
+const GoogleSignInButton = () => {
+
+  useEffect(() => {
+    const handleCredentialResponse = (response) => {
+    };
+
+    const loadGoogleSignIn = () => {
+      try {
+        const script = document.createElement('script');
+        script.src = 'https://accounts.google.com/gsi/client';
+        script.async = true;
+        document.body.appendChild(script);
+      } catch (error) {
+        console.error('Error during Google Sign-In initialization:', error);
+      }
+    };
+
+    loadGoogleSignIn();
+  }, []);
+
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center', pt:4 }}>
-      <Button
-        fullWidth
-        onClick={onClick}
-        disabled={loading}
-        variant="outlined"
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent:'left',
-          gap: 2,
-          borderRadius: '4px',
-          borderColor: '#cbd5e0',
-          color: '#4a5568',
-          height: '56px',
-          '&:hover': {
-            borderColor: '#4a5568',
-            color: '#2d3748',
-            boxShadow: 'rgba(9, 30, 66, 0.25) 0px 8px 16px -4px, rgba(9, 30, 66, 0.3) 0px 6px 16px 0px, rgba(9, 30, 66, 0.12) 0px 2px 6px 0px',
-          }
-        }}
-      >
-        <GoogleIcon />
-        <Typography>Ingresar con Google</Typography>
-      </Button>
-      {loading && <CircularProgress size={24} sx={{ color: '#ff5722', position: 'absolute' }} />}
-    </Box>
+    <>
+      <div id="g_id_onload"
+        data-client_id={import.meta.env.VITE_GOOGLE_CLIENT_ID}
+        data-login_uri="http://localhost:4000/api/auth/google"
+        data-auto_prompt="false">
+      </div>
+      <div className="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left">
+      </div>
+      <div id="buttonDiv"></div>
+    </>
   );
-}
+};
 
-export default GoogleLoginButton;
+export default GoogleSignInButton;

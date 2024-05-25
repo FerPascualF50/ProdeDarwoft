@@ -1,26 +1,26 @@
 import { Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
-import Results from './pages/Results'
+import Bet from './pages/Bet'
 import Layout from './components/Layout'
 import NotFound from './pages/NotFound'
 import Login from './pages/Login'
 // import SignUp from './pages/SignUp';
 // import Users from './pages/Users'
 import './App.css'
-// import { useDispatch } from 'react-redux'
-// import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 import axios from 'axios'
-// import { validateLogin } from './store/authSlice'
+import { validateLogin } from './store/loginGoogleSlice'
 // import PrivateRoute from './components/PrivateRoutes'
 axios.defaults.baseURL = import.meta.env.VITE_API_LOCAL_BASE_URL
 
 const App = () => {
-  // const dispatch = useDispatch()
-  // const access_token = localStorage.getItem('access_token')
-  // useEffect(() => {
-  //   if (!access_token) return
-  //   dispatch(validateLogin())
-  // }, [])
+  const dispatch = useDispatch()
+  const access_token = localStorage.getItem('access_token')
+  useEffect(() => {
+    if (!access_token) return
+    dispatch(validateLogin())
+  }, [])
 
   return (
     <Layout>
@@ -34,7 +34,7 @@ const App = () => {
         {/* <Route element={<PrivateRoute />}> */}
           {/* <Route path="/plans" element={<Plans />} /> */}
         {/* </Route> */}
-        <Route path='/results' element={<Results />} />
+        <Route path='/bet' element={<Bet />} />
         {/* <Route path='/contact' element={<Contact />} /> */}
         {/* <Route path='/faq' element={<Faq />} /> */}
         {/* <Route path='/dashboard-admin'> */}

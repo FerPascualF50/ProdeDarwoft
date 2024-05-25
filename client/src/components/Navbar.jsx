@@ -1,19 +1,17 @@
-import { AppBar, Box, CssBaseline, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemText, Toolbar, Typography, Avatar, Tooltip, ListItemButton } from '@mui/material';
+import { AppBar, Box, CssBaseline, Divider, Drawer, Grid, IconButton, List, ListItem, ListItemText, Toolbar, Typography, Avatar, ListItemButton } from '@mui/material';
 import PropTypes from 'prop-types';
 import MenuIcon from '@mui/icons-material/Menu';
-import LogoutIcon from '@mui/icons-material/Logout';
 import { useState } from 'react';
 import { navItemsAdmin, navItemsUser } from '../utils/navItems';
 import { useNavigate } from 'react-router-dom';
-import { useTheme } from '@mui/material/styles';
+import { useSelector } from 'react-redux';
 import logoDarwoft from '../assets/logo.svg';
 import logoCopaAmerica from '../assets/logoCopaAmerica.png';
 
-const drawerWidth = 160;
+const drawerWidth = 180;
 
 const DrawerAppBar = (props) => {
   const navigate = useNavigate();
-  const theme = useTheme();
   const isLoggedIn = localStorage.getItem('access_token');
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -24,9 +22,10 @@ const DrawerAppBar = (props) => {
   const handleLogout = async () => {
     navigate('/');
   };
+  const { user } = useSelector((state) => state.auth)
 
   const navItemsToRender = isLoggedIn ?
-    (user && user.rol === 'admin' ? navItemsAdmin : navItemsUser) :
+    (user && user.rol ? navItemsAdmin : navItemsUser.filter(item => item.name !== 'LOGIN')) :
     navItemsUser.filter(item => item.name !== 'LOGOUT');
 
   const drawer = (
@@ -86,6 +85,12 @@ const DrawerAppBar = (props) => {
       <nav>
         <Drawer variant="temporary" open={mobileOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true }} anchor="right" sx={{ '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, }, }}>
           {drawer}
+          {isLoggedIn && (
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 'auto', px: 2, marginBottom: 4 }}>
+              <Avatar alt="User Avatar" src={user?.imageProfile} sx={{ width: 48, height: 48, mb: 1 }} />
+              <Typography variant="subtitle2">{user?.firstName}</Typography>
+            </Box>
+          )}
         </Drawer>
       </nav>
       <Box>
