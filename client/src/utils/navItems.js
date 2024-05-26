@@ -11,5 +11,5 @@ export const navItemsUser = [
   { name: 'LOGIN', route: '/login', onclick: 'login' },
   { name: 'INICIO', route: '/' },
   { name: 'MI APUESTA', route: '/bet' },
-  { name: 'LOGOUT', route: '/logout' },
+  { name: 'LOGOUT', route: '/logout', onclick: 'logout' },
 ];

@@ -4,13 +4,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import { navItemsAdmin, navItemsUser } from '../utils/navItems';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import logoDarwoft from '../assets/logo.svg';
 import logoCopaAmerica from '../assets/logoCopaAmerica.png';
+import { logoutGoogle } from '../store/loginGoogleSlice';
 
 const drawerWidth = 180;
 
 const DrawerAppBar = (props) => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
   const isLoggedIn = localStorage.getItem('access_token');
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -20,6 +22,7 @@ const DrawerAppBar = (props) => {
   };
 
   const handleLogout = async () => {
+    dispatch(logoutGoogle())
     navigate('/');
   };
   const { user } = useSelector((state) => state.auth)
@@ -45,11 +48,8 @@ const DrawerAppBar = (props) => {
   );
 
   const handleNavItemClicked = (item) => {
-    if (item.route === '/logout') {
-      handleLogout();
-    } else {
-      navigate(item.route);
-    }
+    const { route, onclick } = item;
+    onclick === 'logout' ? handleLogout() : navigate(route);
   };
 
   const { window } = props;
