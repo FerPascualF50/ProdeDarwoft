@@ -1,5 +1,5 @@
 import CssBaseline from '@mui/material/CssBaseline';
-import { Box, Typography, Container, Link } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 
 const Footer = () => {
   return (
