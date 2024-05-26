@@ -24,7 +24,7 @@ const GoogleSignInButton = () => {
     <>
       <div id="g_id_onload"
         data-client_id={import.meta.env.VITE_GOOGLE_CLIENT_ID}
-        data-login_uri="http://localhost:4000/api/auth/google"
+        data-login_uri={import.meta.env.VITE_GOOGLE_LOGIN_URI}
         data-auto_prompt="false">
       </div>
       <div className="g_id_signin"
