@@ -33,9 +33,9 @@ export const googleAuthCallback = (req, res, next) => {
 };
 
 export const logout = (req, res) => {
-  console.log("Cerrando sesión...");
-  req.logout();
-  res.redirect(process.env.CLIENT_URL);
+  req.logout(() => {
+    res.redirect(process.env.CLIENT_URL);
+  });
 };
 
 export const validateToken = async (req, res) => {
