@@ -26,7 +26,7 @@ export const googleAuthCallback = (req, res, next) => {
       }
       const userData = user.userData;
       const access_token = user.access_token;
-      const redirectUrl = `http://localhost:5173/bet#${encodeURIComponent(JSON.stringify({ userData, access_token }))}`;
+      const redirectUrl = `${process.env.CLIENT_URL}/bet#${encodeURIComponent(JSON.stringify({ userData, access_token }))}`;
       res.redirect(redirectUrl);
     });
   })(req, res, next);
